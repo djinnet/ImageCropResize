@@ -9,18 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Settings.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
+    <PackageReference Include="Autofac" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
+    <ProjectReference Include="..\ImageCropResize.WinCore\ImageCropResize.WinCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\SaveSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>
